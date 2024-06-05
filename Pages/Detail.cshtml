@@ -1,0 +1,27 @@
+﻿@page
+@model razor.Pages.DetailModel
+@{
+}
+
+<form method="post">
+    <table class="table">
+        <tr>
+            <td>Id</td>
+            <td><input type="text" Name="Id" value="@Model.person.Id" disabled/></td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" Name="Name" value="@Model.person.Name" /></td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td><input type="text" Name="Age" value="@Model.person.Age" /></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </td>
+        </tr>
+    </table>
+    
+</form>

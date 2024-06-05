@@ -1,0 +1,40 @@
+﻿@page
+@model IndexModel
+
+<div class="text-center">
+    <h1 class="display-4">Razor Pages Demo</h1>
+    <p>@Model.Message</p>
+    <table class="table">
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Age
+            </th>
+        </tr>
+        @foreach (var p in Model.person)
+        {
+        <tr>
+            <td>
+                <a href="/Detail?id=@p.Id">
+                @p.Id
+                </a>
+            </td>
+            <td>
+                <a href="/Detail?id=@p.Id">
+                @p.Name
+                </a>
+            </td>
+            <td>
+                <a href="/Detail?id=@p.Id">
+                @p.Age
+                </a>
+            </td>
+        </tr>
+        }
+    </table>
+</div>
